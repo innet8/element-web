@@ -16,6 +16,7 @@ limitations under the License.
 
 import * as React from "react";
 import SdkConfig from "matrix-react-sdk/src/SdkConfig";
+import "./custom.css"
 
 import VectorAuthFooter from "./VectorAuthFooter";
 
