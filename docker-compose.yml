@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  nginx:
+    container_name: "eimchat-nginx"
+    image: "nginx:alpine"
+    ports:
+      - "3399:80"
+    volumes:
+      - ./docker/nginx:/etc/nginx/conf.d
+      - ./public:/var/www/public
+    environment:
+      TZ: "Asia/Shanghai"
+    restart: unless-stopped
+    networks:
+      - eimchat-network
+
+networks:
+  eimchat-network:
+    driver: bridge
